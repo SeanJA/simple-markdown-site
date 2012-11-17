@@ -1,0 +1,7 @@
+# every call to a page that is not an existing file
+# is redirected to index.php as querystring
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?page=$1 [QSA]
