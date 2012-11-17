@@ -3,7 +3,7 @@
 require 'classes/markdown.php';
 
 function is_cached($file){
-	$file = '.cache/'.sha1($file);
+	$file = '.page-cache/'.sha1($file);
 	if(!file_exists($file) || time() - filemtime($file) < 3600){
 		return false;
 	}
@@ -11,6 +11,6 @@ function is_cached($file){
 }
 
 function cache_file($file, $data){
-	$file = '.cache/'.sha1($file);
+	$file = '.page-cache/'.sha1($file);
 	file_put_contents($file, $data);
 }
