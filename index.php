@@ -1,17 +1,21 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', true);
 
 require 'config.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'page-1';
-	
+
 $m = new markdown();
 
 $file = 'pages/' . $page . '.md';
 
 if (!file_exists($file)) {
     header('HTTP/1.0 404 Not Found');
-    $page = '404';
-} elseif ($data = is_cached($file)) {
+    $file = 'pages/404.md';
+}
+
+if ($data = is_cached($file)) {
 	echo $data;
 } else {
 	ob_start();
@@ -47,5 +51,4 @@ if (!file_exists($file)) {
 	include 'templates/footer.php';
 	$data = ob_get_flush();
 	cache_file($file, $data);
-	// echo $data;
 }
