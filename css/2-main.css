@@ -1,0 +1,55 @@
+body{
+	background: url('../img/background.jpg');
+}
+
+.content{
+	width: 900px;
+	margin: 10px auto;
+	background-color: #FDFDFD;
+	border-radius: 2px;
+	padding: 10px;
+}
+
+.images img{
+	margin: 5px;
+}
+
+.right{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+footer nav{
+	width: 500px;
+	margin: 0 auto;
+	height: 180px;
+}
+
+hr.fancy {
+	position: relative;
+	margin-top: 20px;
+	background: #c0c0c0;
+	height: 2px;
+}
+hr.fancy:before {
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: .8em;
+	left: 50%;
+	margin: -14px 0 0 -8px;
+	content: "\2767";
+	font-size: 150%;
+	padding: 0 8px;
+	background: white;
+}
+
+hr.space{
+	border: none;
+	position: static;
+	clear: both;
+	background: transparent;
+}
