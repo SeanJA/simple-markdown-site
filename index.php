@@ -15,9 +15,7 @@ if (!file_exists($file)) {
     $file = 'pages/404.md';
 }
 
-if ($data = is_cached($file)) {
-	echo $data;
-} else {
+if (!is_cached($file)) {
 	ob_start();
 	// read the first line
 	$f = fopen($file, 'r');
