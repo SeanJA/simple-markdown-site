@@ -12,17 +12,14 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/1-main.css">
-        <link rel="stylesheet" href="css/2-main.css">
-        <link rel="stylesheet" href="css/3-main.css">
-        <link rel="stylesheet" href="css/lightbox.css"/>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="<?php echo url('css/normalize.css') ?>">
+        <link rel="stylesheet" href="<?php echo url('css/1-main.css') ?>">
+        <link rel="stylesheet" href="<?php echo url('css/2-main.css') ?>">
+        <link rel="stylesheet" href="<?php echo url('css/3-main.css') ?>">
+        <link rel="stylesheet" href="<?php echo url('css/lightbox.css') ?>"/>
+        <script src="<?php echo url('js/vendor/modernizr-2.6.2.min.js') ?>"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
+        
         <!-- Add your site or application content here -->
         <div class="content" role="main">
