@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', true);
 
 require 'config.php';
+require 'functions.php';
 
 $page = isset($_GET['page']) ? $_GET['page'] : 'page-1';
 
